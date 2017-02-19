@@ -37,6 +37,8 @@ export class SchemaPreprocessor {
   }
 
   private static checkAndCreateFieldsets(jsonSchema: any, path: string) {
+    SchemaPreprocessor.findSubObjectAndCreateFieldset(jsonSchema);
+
     if (jsonSchema.fieldsets === undefined) {
       if (jsonSchema.order !== undefined) {
         SchemaPreprocessor.replaceOrderByFieldsets(jsonSchema);
@@ -44,6 +46,7 @@ export class SchemaPreprocessor {
         SchemaPreprocessor.createFieldsets(jsonSchema);
       }
     }
+
     SchemaPreprocessor.checkFieldsUsage(jsonSchema, path);
   }
 
@@ -83,6 +86,33 @@ export class SchemaPreprocessor {
   private static createFieldsets(jsonSchema) {
     jsonSchema.order = Object.keys(jsonSchema.properties);
     SchemaPreprocessor.replaceOrderByFieldsets(jsonSchema);
+  }
+
+  private static findSubObjectAndCreateFieldset(jsonSchema) {
+    let fieldsets = [];
+
+    Object.keys(jsonSchema.properties).forEach((value, index) => {
+      let splitted = value.split('.');
+
+      if (splitted.length) {
+        jsonSchema.fieldsets = [];
+        let name = splitted[0];
+
+        if (fieldsets.hasOwnProperty(name)) {
+          fieldsets[name].push(value);
+        } else {
+          fieldsets[name] = [value];
+        }
+      }
+    });
+
+    fieldsets.forEach((value, key) => {
+      jsonSchema.fieldsets.push({
+        id: key,
+        title: key,
+        fields: value
+      });
+    });
   }
 
   private static replaceOrderByFieldsets(jsonSchema) {

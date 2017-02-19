@@ -70,7 +70,7 @@
     "@angularclass/hmr-loader": "^3.0.2",
     "@ngtools/webpack": "^1.1.4",
     "@types/core-js": "^0.9.28",
-    "@types/jasmine": "^2.5.37",
+    "@types/jasmine": "2.5.41",
     "@types/node": "^6.0.31",
     "angular2-template-loader": "^0.6.0",
     "autoprefixer": "^6.4.0",
