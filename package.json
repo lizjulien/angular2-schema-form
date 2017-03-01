@@ -1,6 +1,6 @@
 {
-  "name": "angular2-schema-form",
-  "version": "1.0.0-alpha.33",
+  "name": "@chatterton/angular2-schema-form",
+  "version": "1.0.0-alpha.33-baliz",
   "description": "Angular2 Schema Form (DISCLAIMER: it is not related to angular-schema-form)",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/makinacorpus/angular2-schema-form"
+    "url": "git+https://github.com/lizjulien/angular2-schema-form"
   },
   "keywords": [
     "angularjs",
@@ -32,7 +32,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/makinacorpus/angular2-schema-form/issues"
+    "url": "https://github.com/lizjulien/angular2-schema-form/issues"
   },
   "contributors": [
     "Frank Bessou <fbessou@free.fr>",
