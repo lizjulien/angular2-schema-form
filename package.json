@@ -1,6 +1,6 @@
 {
   "name": "@chatterton/angular2-schema-form",
-  "version": "1.0.0-alpha.34-baliz",
+  "version": "1.0.0-alpha.36-baliz",
   "description": "Angular2 Schema Form (DISCLAIMER: it is not related to angular-schema-form)",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
