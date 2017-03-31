@@ -2,12 +2,15 @@
 	<label [attr.for]="id" class="horizontal control-label">
 		{{ schema.title }}
 	</label>
+
 	<div *ngFor="let itemProperty of formProperty.properties; let i=index">
 		<sf-form-element [formProperty]="itemProperty"></sf-form-element>
+
 		<button (click)="removeItem(i)" class="btn btn-default array-remove-button">
 			<span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Remove
 		</button>
 	</div>
+
 	<span *ngIf="schema.help" class="formHelp">{{schema.help}}</span>
 	<button (click)="addItem()" class="btn btn-default array-add-button">
 		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add

@@ -2,6 +2,6 @@
 	<label [attr.for]="id" class="horizontal control-label">
 		{{ schema.title }}
 	</label>
-	<textarea [attr.readonly]="schema.readOnly" [name]="name" class="text-widget textarea-widget form-control" [formControl]="control"></textarea>
+	<textarea [attr.required]="schema.required" [attr.readonly]="schema.readOnly" [name]="name" class="text-widget textarea-widget form-control" [formControl]="control"></textarea>
     <span *ngIf="schema.help" class="formHelp">{{schema.help}}</span>
 </div>
