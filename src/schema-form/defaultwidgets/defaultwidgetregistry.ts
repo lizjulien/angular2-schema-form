@@ -8,7 +8,8 @@ import {
   RadioWidget,
   RangeWidget,
   SelectWidget,
-  StringWidget
+  StringWidget,
+  TinyMCEWidget
 } from './';
 
 import { WidgetRegistry } from '../widgetregistry';
@@ -42,6 +43,7 @@ export class DefaultWidgetRegistry extends WidgetRegistry {
     this.register('radio', RadioWidget);
     this.register('boolean', CheckboxWidget);
     this.register('checkbox', CheckboxWidget);
+    this.register('tinymce', TinyMCEWidget)
 
     this.setDefaultWidget(StringWidget);
   }

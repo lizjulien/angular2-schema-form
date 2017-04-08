@@ -8,6 +8,10 @@ import {
 import { FormElementComponent } from './formelement.component';
 import { FormComponent } from './form.component';
 import { WidgetChooserComponent } from './widgetchooser.component';
+
+import { TinyMCEComponent } from "./defaultwidgets/tinymce/tinymce.component";
+import { TinyMCEValueAccessor } from "./defaultwidgets/tinymce/tinymce.valueaccessor";
+
 import {
   ArrayWidget,
   ObjectWidget,
@@ -18,7 +22,8 @@ import {
   RadioWidget,
   RangeWidget,
   SelectWidget,
-  StringWidget
+  StringWidget,
+  TinyMCEWidget
 } from './defaultwidgets';
 
 @NgModule({
@@ -37,6 +42,9 @@ import {
     RangeWidget,
     SelectWidget,
     StringWidget,
+    TinyMCEWidget,
+    TinyMCEComponent,
+    TinyMCEValueAccessor
   ],
   entryComponents: [
     FormElementComponent,
@@ -52,6 +60,7 @@ import {
     RangeWidget,
     SelectWidget,
     StringWidget,
+    TinyMCEWidget
   ],
   exports: [
     FormComponent,
@@ -65,7 +74,8 @@ import {
     RadioWidget,
     RangeWidget,
     SelectWidget,
-    StringWidget
+    StringWidget,
+    TinyMCEWidget
   ]
 })
 export class SchemaFormModule {}

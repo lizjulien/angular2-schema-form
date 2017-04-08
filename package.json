@@ -1,6 +1,6 @@
 {
   "name": "@chatterton/angular2-schema-form",
-  "version": "1.0.0-alpha.38-baliz",
+  "version": "1.0.0-alpha.39-baliz",
   "description": "Angular2 Schema Form (DISCLAIMER: it is not related to angular-schema-form)",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -54,6 +54,9 @@
     "@angular/platform-browser": "^2.2.4",
     "@angular/platform-browser-dynamic": "^2.2.4",
     "core-js": "^2.4.0"
+  },
+  "optionalDependencies": {
+    "tinymce": "^4.4.2"
   },
   "devDependencies": {
     "@angular/common": "2.2.4",
@@ -109,6 +112,7 @@
     "sass-loader": "^4.0.1",
     "source-map-loader": "^0.1.5",
     "style-loader": "0.13.1",
+    "tinymce": "^4.4.2",
     "ts-helpers": "^1.1.2",
     "tslint": "3.15.1",
     "tslint-loader": "^2.1.5",
