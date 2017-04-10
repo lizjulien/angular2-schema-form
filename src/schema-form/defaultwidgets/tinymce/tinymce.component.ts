@@ -118,7 +118,9 @@ export class TinyMCEComponent implements OnChanges, AfterViewInit, OnDestroy {
 	setContent(content: string) {
 		this.initialValue = content;
 		if (this.editor) {
-			this.editor.setContent(content);
+			setTimeout(() => {
+				this.editor.setContent(content);
+			}, 1000);
 		}
 	}
 }
