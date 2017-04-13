@@ -1,0 +1,17 @@
+<div class="widget form-group">
+    <label [attr.for]="id" class="horizontal control-label">
+        {{ schema.title }}
+    </label>
+
+	<div class="checkbox">
+		<label class="horizontal control-label">
+			<span *ngFor="let option of schema.collection">
+				<input (click)="check(option.key)" [attr.required]="schema.required" [formControl]="control" [checked]="option.checked" [attr.name]="name" type="checkbox" [attr.disabled]="schema.readOnly">
+				{{ option.value }}
+			</span>
+		</label>
+	</div>
+
+    <span *ngIf="schema.help" class="formHelp">{{schema.help}}</span>
+</div>
+

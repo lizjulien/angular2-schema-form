@@ -1,4 +1,5 @@
-<div class="widget">
-	<label [attr.for]="id" class="horizontal control-label">{{schema.description}}</label>
-	<tinymce [formControl]="control" [id]="id" [readonly]="schema.readonly" ></tinymce>
+<div class="widget form-group">
+	<label [attr.for]="id" class="horizontal control-label">{{schema.title}}</label>
+	<tinymce [formControl]="control" [id]="id" [readonly]="schema.readonly"></tinymce>
+	<span *ngIf="schema.help" class="formHelp">{{schema.help}}</span>
 </div>

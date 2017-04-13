@@ -7,7 +7,6 @@ import { ArrayLayoutWidget } from '../../widget';
   template: require('./array.widget.html')
 })
 export class ArrayWidget extends ArrayLayoutWidget {
-
   addItem() {
     this.formProperty.addItem();
   }

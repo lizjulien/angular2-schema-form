@@ -66,7 +66,7 @@ export class SchemaPreprocessor {
         }
         delete usedFields[fieldId];
       } else if (jsonSchema.required.indexOf(fieldId) > -1 ) {
-        schemaError(`${fieldId} is a required field but it is not referenced as part of a 'order' or a 'fieldset' property`, path);
+          schemaError(`${fieldId} is a required field but it is not referenced as part of a 'order' or a 'fieldset' property`, path);
       } else {
         delete jsonSchema[fieldId];
           schemaWarning(`Removing unreferenced field ${fieldId}`, path);

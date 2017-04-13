@@ -15,6 +15,7 @@ export class ControlWidget extends Widget<FormProperty> implements AfterViewInit
 
   ngAfterViewInit() {
     let control = this.control;
+
     this.formProperty.valueChanges.subscribe((newValue) => {
       if (control.value !== newValue) {
         control.setValue(newValue, {emitEvent: false});

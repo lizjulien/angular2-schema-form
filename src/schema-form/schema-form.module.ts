@@ -23,7 +23,8 @@ import {
   RangeWidget,
   SelectWidget,
   StringWidget,
-  TinyMCEWidget
+  TinyMCEWidget,
+  MultipleWidget
 } from './defaultwidgets';
 
 @NgModule({
@@ -42,6 +43,7 @@ import {
     RangeWidget,
     SelectWidget,
     StringWidget,
+    MultipleWidget,
     TinyMCEWidget,
     TinyMCEComponent,
     TinyMCEValueAccessor
@@ -60,6 +62,7 @@ import {
     RangeWidget,
     SelectWidget,
     StringWidget,
+    MultipleWidget,
     TinyMCEWidget
   ],
   exports: [
@@ -75,6 +78,7 @@ import {
     RangeWidget,
     SelectWidget,
     StringWidget,
+    MultipleWidget,
     TinyMCEWidget
   ]
 })

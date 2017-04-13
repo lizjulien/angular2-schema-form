@@ -10,3 +10,4 @@ export * from './string/string.widget';
 export * from './textarea/textarea.widget';
 export * from './defaultwidgetregistry';
 export * from './tinymce/tinymce.widget';
+export * from './multiple/multiple.widget';

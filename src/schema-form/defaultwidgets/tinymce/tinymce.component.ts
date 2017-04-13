@@ -26,7 +26,10 @@ export class TinyMCEComponent implements OnChanges, AfterViewInit, OnDestroy {
 
 	@Input() readonly: boolean = false;
 	@Input() id: string;
-	@Input() options: any = {plugins: "code"};
+	@Input() options: any = {
+		plugins: 'advlist autolink lists link image charmap hr anchor pagebreak searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking save table contextmenu directionality paste textcolor colorpicker textpattern imagetools',
+		language: 'fr_FR'
+	};
 	@Output() contentChange = new EventEmitter();
 	@Output() blur = new EventEmitter();
 	@Output() focus = new EventEmitter();
