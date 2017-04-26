@@ -14,6 +14,7 @@ export class MultipleWidget extends ControlWidget implements AfterViewInit {
   ngAfterViewInit() {
      this.formProperty.valueChanges.subscribe((newValue) => {
        if (this.control.value !== newValue) {
+
         this.schema.collection.forEach(element => {
           newValue.forEach(checked => {
             if (checked === element.key) {
@@ -26,6 +27,10 @@ export class MultipleWidget extends ControlWidget implements AfterViewInit {
   }
 
   check(checked) {
+    if (!this.formProperty.value) {
+      this.formProperty.setValue([], false);
+    }
+
     this.schema.collection.forEach(element => {
       if (checked === element.key && !element.checked) {
         element.checked = true;
