@@ -22,8 +22,9 @@ export class DefaultWidgetRegistry extends WidgetRegistry {
     this.register('array',  ArrayWidget);
     this.register('object',  ObjectWidget);
 
-    this.register('string', StringWidget);
     this.register('search', StringWidget);
+    this.register('auto-complete', StringWidget);
+    this.register('string', StringWidget);
     this.register('tel', StringWidget);
     this.register('url', StringWidget);
     this.register('email', StringWidget);

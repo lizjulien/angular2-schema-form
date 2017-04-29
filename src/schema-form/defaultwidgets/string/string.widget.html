@@ -2,7 +2,44 @@
     <label [attr.for]="id" class="horizontal control-label">
     	{{ schema.title }}
     </label>
-    <input [attr.required]="schema.required" [name]="name" [attr.readonly]="(schema.widget.id!=='color') && schema.readOnly?true:null"  class="text-widget.id textline-widget form-control" [attr.type]="this.getInputType()" [attr.id]="id"  [formControl]="control" [attr.placeholder]="schema.placeholder" [attr.disabled]="(schema.widget.id=='color' && schema.readOnly)?true:null">
-    <input *ngIf="(schema.widget.id==='color' && schema.readOnly)" [attr.name]="name" type="hidden" [formControl]="control">
-    <span *ngIf="schema.help" class="formHelp">{{schema.help}}</span>
+
+    <input 
+        class="text-widget.id textline-widget form-control" 
+        [attr.required]="schema.required" 
+        [name]="name" 
+        [attr.readonly]="schema.widget.id !== 'color' && schema.readOnly ? true : null"
+        [attr.type]="this.getInputType()" 
+        [attr.id]="id"  
+        [formControl]="control" 
+        [attr.placeholder]="schema.placeholder" 
+        [attr.disabled]="schema.widget.id === 'color' && schema.readOnly ? true : null"
+        *ngIf="schema.widget.id !== 'auto-complete'"
+    >
+
+    <input 
+        class="text-widget.id textline-widget form-control" 
+        [attr.required]="schema.required" 
+        [name]="name" 
+        [attr.type]="this.getInputType()" 
+        [attr.id]="id"  
+        [formControl]="control" 
+        [attr.placeholder]="schema.placeholder" 
+        *ngIf="schema.widget.id === 'auto-complete'"
+        auto-complete
+        [source]="schema.source"
+        [value-formatter]="schema.valueFormatter"
+        [list-formatter]="schema.listFormatter"
+    >
+
+    <input 
+        type="hidden" 
+        *ngIf="schema.widget.id === 'color' && schema.readOnly" 
+        [attr.name]="name" 
+        [formControl]="control"
+    >
+
+    <span 
+        class="formHelp"
+        *ngIf="schema.help"
+    >{{schema.help}}</span>
 </div>

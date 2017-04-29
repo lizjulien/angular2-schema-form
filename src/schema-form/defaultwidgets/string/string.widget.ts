@@ -9,7 +9,7 @@ import { ControlWidget } from '../../widget';
 export class StringWidget extends ControlWidget {
 
     getInputType() {
-        if (!this.schema.widget.id || this.schema.widget.id === 'string') {
+        if (!this.schema.widget.id || this.schema.widget.id === 'string' || this.schema.widget.id === 'auto-complete') {
             return 'text';
         } else {
             return this.schema.widget.id;

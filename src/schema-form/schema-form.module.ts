@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+ import { NguiAutoCompleteModule } from '@ngui/auto-complete';
+
 import {
   FormsModule,
   ReactiveFormsModule
@@ -28,7 +30,7 @@ import {
 } from './defaultwidgets';
 
 @NgModule({
-  imports : [CommonModule, FormsModule, ReactiveFormsModule],
+  imports : [CommonModule, FormsModule, ReactiveFormsModule, NguiAutoCompleteModule],
   declarations: [
     FormElementComponent,
     FormComponent,

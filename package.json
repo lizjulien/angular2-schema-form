@@ -1,6 +1,6 @@
 {
   "name": "@chatterton/angular2-schema-form",
-  "version": "1.0.43-baliz",
+  "version": "1.0.44-baliz",
   "description": "Angular2 Schema Form (DISCLAIMER: it is not related to angular-schema-form)",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -53,6 +53,7 @@
     "@angular/forms": "^2.2.4",
     "@angular/platform-browser": "^2.2.4",
     "@angular/platform-browser-dynamic": "^2.2.4",
+    "@ngui/auto-complete": "^0.13.2",
     "core-js": "^2.4.0"
   },
   "optionalDependencies": {

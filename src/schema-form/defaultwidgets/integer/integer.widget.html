@@ -4,6 +4,6 @@
 		{{ schema.title }}
 	</label>
 	<div class="widget form-group">
-	<input [attr.required]="schema.required" [attr.readonly]="schema.readOnly?true:null" [name]="name" class="text-widget integer-widget form-control" [formControl]="control" [attr.type]="'number'" [attr.min]="schema.minimum" [attr.max]="schema.maximum" [attr.step]="schema.step" [attr.placeholder]="schema.placeholder">
+	<input [attr.required]="schema.required" [attr.readonly]="schema.readOnly?true:null" [name]="name" class="text-widget integer-widget form-control" [formControl]="control" [attr.type]="'number'" [attr.min]="schema.minimum" [attr.max]="schema.maximum" [attr.step]="schema.step" [attr.placeholder]="schema.placeholder" >
     <span *ngIf="schema.help" class="formHelp">{{schema.help}}</span>
 </div>
