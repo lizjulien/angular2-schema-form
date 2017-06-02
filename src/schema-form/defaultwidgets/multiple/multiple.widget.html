@@ -4,9 +4,9 @@
     </label>
 
 	<div class="checkbox">
-		<label class="horizontal control-label">
-			<span *ngFor="let option of schema.collection">
-				<input (click)="check(option.key)" [attr.required]="schema.required" [formControl]="control" [checked]="option.checked" [attr.name]="name" type="checkbox" [attr.disabled]="schema.readOnly">
+		<label class="horizontal control-label" [for]="name">
+			<span *ngFor="let option of schema.collection" (click)="check(option.key)" style="user-select: none; cursor: pointer;">
+				<input [attr.required]="schema.required" [formControl]="control" [checked]="option.checked" [attr.name]="name" type="checkbox" [attr.disabled]="schema.readOnly">
 				{{ option.value }}
 			</span>
 		</label>
