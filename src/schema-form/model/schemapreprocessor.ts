@@ -6,12 +6,12 @@ function formatMessage(message, path) {
 
 function schemaError(message, path): void {
   let mesg = formatMessage(message, path);
-  throw new Error(mesg);
+  console.error(mesg);
 }
 
 function schemaWarning(message, path): void {
   let mesg = formatMessage(message, path);
-  throw new Error(mesg);
+  console.error(mesg);
 }
 
 export class SchemaPreprocessor {
